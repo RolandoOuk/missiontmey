@@ -9,6 +9,7 @@ class CreateUserResumeTable extends Migration
     public function up()
     {
         Schema::create('user_resume', function (Blueprint $table) {
+            $table->id('user_resume_id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('template_id');
             $table->timestamps();
